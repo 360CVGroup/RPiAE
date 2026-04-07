@@ -43,16 +43,16 @@ RPiAE follows a two-stage pipeline:
 
 ### Download Pre-trained Models
 
-Pretrained checkpoints will be released on Hugging Face:
-
+Pretrained checkpoints will be released on Hugging Face (Comming Soon):
+<!-- 
 ```bash
 https://huggingface.co/<your-org-or-user>/RPiAE
-```
+``` -->
 
 ### Prepare Dataset
 
 1. Download ImageNet-1k.
-2. Point Stage 1 and Stage 2 scripts to the training split via `--data-path`.
+2. Point scripts to the training split or validation split via `--data-path`.
 
 ## Config-based Initialization
 
@@ -254,7 +254,7 @@ torchrun --standalone --nnodes=1 --nproc_per_node=N \
   --label-sampling equal
 ```
 
-`--label-sampling {equal,random}`: `equal` uses exactly 50 images per class for FID-50k; `random` uniformly samples labels. Using `equal` brings consistently lower FID than `random` by around 0.1. We use `equal` by default. We recommend using fp32 when model FID is low.
+`--label-sampling {equal,random}`: `equal` uses exactly 50 images per class for FID-50k; `random` uniformly samples labels. We use `equal` by default. We recommend using fp32 when model FID is low.
 
 Autoguidance and classifier-free guidance are controlled via the config’s `guidance` block.
 
