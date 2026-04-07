@@ -1,0 +1,24 @@
+CONFIG_PATH=$1
+RANK=
+MASTER_ADDR=
+GPUS_PER_NODE=
+NNODES=
+TRAIN_DATA_PATH=./path/to/imagenet/train
+RESULTS_DIR=./path/to/results/stage1
+MASTER_PORT=12348
+
+export EXPERIMENT_NAME="experiment_name"
+export WANDB_MODE="offline" 
+export ENTITY="your_wandb_entity" 
+export PROJECT="project"
+torchrun --nnodes=$NNODES \
+ --node_rank=$RANK \
+ --nproc_per_node=$GPUS_PER_NODE \
+ --master_addr=$MASTER_ADDR \
+ --master_port=$MASTER_PORT \
+  src/train_stage1_rpiae_s1.py \
+  --config $CONFIG_PATH \
+  --data-path $TRAIN_DATA_PATH \
+  --results-dir $RESULTS_DIR \
+  --image-size 256 --precision bf16 \
+  --wandb
