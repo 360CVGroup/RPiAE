@@ -4,11 +4,10 @@
 
 <h1 align="center">RPiAE: A Representation-Pivoted Autoencoder Enhancing Both Image Generation and Editing</h1>
 
-<p align="center">
-  <a href="https://arthuring.github.io/RPiAE-page/"><img src="https://img.shields.io/badge/Project-RPiAE%20Page-1f6feb?style=flat" alt="Project Page"></a>
-  <a href="#"><img src="https://img.shields.io/badge/Hugging%20Face-Coming%20Soon-lightgrey?style=flat" alt="Hugging Face"></a>
-  <a href="https://arxiv.org/abs/2603.19206"><img src="https://img.shields.io/badge/arXiv-2603.19206-B31B1B?style=flat" alt="arXiv"></a>
-</p>
+[![Project Page](https://img.shields.io/badge/Project%20Page-RPiAE-1f6feb?style=flat)](https://arthuring.github.io/RPiAE-page/)
+[![GitHub](https://img.shields.io/badge/GitHub-360CVGroup%2FRPiAE-181717?style=flat&logo=github)](https://github.com/360CVGroup/RPiAE)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-RPiAE-ff9900?style=flat)](#)
+[![arXiv](https://img.shields.io/badge/arXiv-2603.19206-B31B1B?style=flat)](https://arxiv.org/abs/2603.19206)
 
 This repository contains the PyTorch implementation of **RPiAE** and the corresponding latent diffusion training pipeline.
 
@@ -300,3 +299,17 @@ This code is built upon the following repositories:
 * [LightningDiT](https://github.com/hustvl/LightningDiT/)
 * [MAE](https://github.com/facebookresearch/mae)
 * [RAE](https://github.com/bytetriper/RAE)
+
+## Citation
+If you find this repository useful, please consider citing our paper:
+```
+@misc{RPiAE,
+  title={RPiAE: A Representation-Pivoted Autoencoder Enhancing Both Image Generation and Editing},
+  author={Yue Gong and Hongyu Li and Shanyuan Liu and Bo Cheng and Yuhang Ma and Liebucha Wu and Xiaoyu Wu and Manyuan Zhang and Dawei Leng and Yuhui Yin and Lijun Zhang},
+  year={2026},
+  eprint={2603.19206},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2603.19206},
+}
+```
