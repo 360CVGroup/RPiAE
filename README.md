@@ -1,3 +1,9 @@
+---
+license: apache-2.0
+language:
+- en
+---
+
 <p align="center">
   <img src="assets/logo.png" alt="RPiAE Logo" width="200">
 </p>
@@ -6,7 +12,7 @@
 
 [![Project Page](https://img.shields.io/badge/Project%20Page-RPiAE-1f6feb?style=flat)](https://arthuring.github.io/RPiAE-page/)
 [![GitHub](https://img.shields.io/badge/GitHub-360CVGroup%2FRPiAE-181717?style=flat&logo=github)](https://github.com/360CVGroup/RPiAE)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-RPiAE-ff9900?style=flat)](#)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-RPiAE-ff9900?style=flat)](https://huggingface.co/qihoo360/RPiAE)
 [![arXiv](https://img.shields.io/badge/arXiv-2603.19206-B31B1B?style=flat)](https://arxiv.org/abs/2603.19206)
 
 This repository contains the PyTorch implementation of **RPiAE** and the corresponding latent diffusion training pipeline.
@@ -19,7 +25,7 @@ RPiAE follows a two-stage pipeline:
 
 - [x] Release the RPiAE model
 - [x] Release the training code for RPiAE
-- [ ] Release pretrained weights
+- [x] Release pretrained weights
 - [ ] Release the training code for T2I
 
 ## Environment
@@ -42,11 +48,15 @@ RPiAE follows a two-stage pipeline:
 
 ### Download Pre-trained Models
 
-Pretrained checkpoints will be released on Hugging Face (Comming Soon):
-<!-- 
+Pretrained checkpoints are available on [Hugging Face](https://huggingface.co/qihoo360/RPiAE).
+
+Download the pretrain weights to `./model_weights`:
+
 ```bash
-https://huggingface.co/<your-org-or-user>/RPiAE
-``` -->
+hf download qihoo360/RPiAE \
+  --repo-type model \
+  --local-dir ./model_weights
+```
 
 ### Prepare Dataset
 
